@@ -1,31 +1,7 @@
 # Omnigraph 해부: 브랜치되는 타입 그래프 DB 코드 분석
 
-이 책은 WikiDocs와 연동된 GitHub 리포지토리입니다.
+[ModernRelay/omnigraph](https://github.com/ModernRelay/omnigraph)는 노드와 엣지 타입마다 Lance dataset 하나를 두고, `__manifest` 테이블 하나로 그래프 전체의 버전과 브랜치를 묶는 객체 저장소 기반 그래프 데이터베이스다. 이 책은 Rust 핵심 엔진 코드를 따라가며 스키마 컴파일, 쿼리 계획과 실행, 벡터와 전문 검색, 쓰기와 적재, 매니페스트 게시, 브랜치 병합, 변경 피드가 어떻게 맞물리는지 설명한다.
 
-## 사용 방법
-
-1. `TOC.md` 파일에서 목차 구조를 정의하세요.
-2. `pages/` 디렉토리에 마크다운 파일을 추가하세요.
-3. 변경사항을 push하면 WikiDocs에 자동으로 반영됩니다.
-
-## 페이지 정렬 규칙 (중요!)
-
-WikiDocs는 페이지를 **제목 알파벳순**으로 자동 정렬합니다.
-원하는 순서를 유지하려면 제목에 **번호를 붙이세요**:
-
-```markdown
-# TOC.md 예시
-* [01. 시작하기](pages/01-getting-started.md)
-  * [01-1. 설치](pages/01-1-install.md)
-  * [01-2. 환경설정](pages/01-2-config.md)
-* [02. 기본 문법](pages/02-basics.md)
-* [03. 심화 학습](pages/03-advanced.md)
-```
-
-## 이미지 사용
-
-이미지는 `assets/` 디렉토리에 저장하고 상대 경로로 참조하세요:
-
-```markdown
-![이미지 설명](./assets/example.png)
-```
+- 기준 커밋: [`00b8cca`](https://github.com/ModernRelay/omnigraph/tree/00b8cca842f2bf009bebeefcf765672b5ff64b26) (v0.16.0, 2026-11-19)
+- 원본 라이선스: MIT. 코드 인용은 해설에 필요한 만큼 짧게 하고 원문 링크를 함께 건다
+- 원고 저장소: [workdd/I_AM_ML_Engineer](https://github.com/workdd/I_AM_ML_Engineer) `books/omnigraph`
